@@ -1,13 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  unitCategories: [
-    { id: 'cm', name: 'Cm' },
-    { id: 'ft', name:'Ft/In' }
+  queryParams: ['activeUnit'],
+  activeUnit: 'cm',
+
+  units: [
+    { id: 'cm', name: 'Centimeters' },
+    { id: 'in', name:'Inches' }
   ],
-  
+
   actions: {
-    activateUnit(unit){
+    setActiveUnit(unit){
       this.set('activeUnit', unit);
     }
   }
