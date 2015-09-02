@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('radio-buttons');
+  this.route('radio-input');
 });
 
 export default Router;

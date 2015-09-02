@@ -1,0 +1,16 @@
+
+<h3>Radio Inputs</h3>
+
+{{#each unitCategories as |category|}}
+  <label>
+    <input  type="radio"
+            name="checkboxes"
+            value="{{category.id}}"
+            onclick={{action "activateUnit" value="target.value"}}>
+            {{category.name}}<br>
+  </label>
+{{/each}}<br>
+
+{{#if activeUnit}}
+  <p>Active measurement units are {{activeUnit}}</p>
+{{/if}}
