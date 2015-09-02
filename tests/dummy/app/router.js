@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('checkboxes');
+  this.route('radio-buttons');
 });
 
 export default Router;
