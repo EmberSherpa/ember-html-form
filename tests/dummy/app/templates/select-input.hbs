@@ -1,0 +1,9 @@
+<h2>Select Input</h2>
+
+<select onchange={{action (mut activeUnit) value='target.value'}}>
+  {{#each units as |unit|}}
+    <option value={{unit}} selected={{eq activeUnit unit}}>{{unit}}</option>
+  {{/each}}
+</select>
+
+<p>Selected input: {{activeUnit}}</p>

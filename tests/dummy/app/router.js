@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('many-inputs');
   });
   this.route('text-input');
+  this.route('select-input');
 });
 
 export default Router;
