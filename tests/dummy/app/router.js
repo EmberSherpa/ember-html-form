@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('checkbox-input', function(){
     this.route('many-inputs');
   });
+  this.route('text-input');
 });
 
 export default Router;
