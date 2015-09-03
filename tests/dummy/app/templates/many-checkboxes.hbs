@@ -1,0 +1,46 @@
+<div class="posts">
+  <h1 class="content-subhead">Checkboxes</h1>
+
+  <section class="post">
+      <header class="post-header">
+          <h2 class="post-title">Many Checkboxes</h2>
+      </header>
+
+      <div class="pure-g post-description">
+        <div class="pure-u-1 pure-u-sm-1-2">
+          {{! BEGIN-SNIPPET many-checkboxes}}
+          <div class="many-inputs">
+            {{#ember-collection
+              classNames="checkboxes"
+              items=model
+              height=250
+              width=225
+              cell-layout=(fixed-grid-layout 225 25)
+              as |item|}}
+                <label>
+                  <input
+                    type="checkbox"
+                    name="items"
+                    value={{item.id}}
+                    onclick={{action "updateSelection" value="target.value"}}
+                    checked={{array-contains selection item.id}}
+                    > {{item.name}}
+                </label>
+            {{/ember-collection}}
+          </div>
+          {{! END-SNIPPET }}
+        </div>
+        <div class="selection-container pure-u-1 pure-u-sm-1-2">
+          <ul>
+            {{#each selection as |item|}}
+              <li>{{item}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="pure-u-1">
+          {{code-snippet name="many-checkboxes.hbs"}}
+          {{code-snippet name="many-checkboxes.js"}}
+        </div>
+      </div>
+  </section>
+</div>
