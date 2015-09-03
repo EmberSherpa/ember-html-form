@@ -1,0 +1,27 @@
+<h2>Text Input</h2>
+
+<div class="row">
+  <label>
+    Title<br>
+    <input
+      type="text"
+      value={{title}}
+      oninput={{action (mut title) value="target.value"}}
+      ></label>
+</div>
+<div class="row">
+  <label>
+    Content<br>
+    <textarea
+      value={{content}}
+      onkeyup={{action (mut content) value="target.value"}}
+      onchange={{action (mut content) value="target.value"}}
+      ></textarea>
+  </label>
+</div>
+
+<div class="row">
+  <h3>{{title}}</h3>
+
+  <p>{{content}}</p>
+</div>
