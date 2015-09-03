@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('radio-input');
+  this.route('checkbox-input');
 });
 
 export default Router;
