@@ -7,9 +7,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('radio-input');
-  this.route('checkbox-input', function(){
-    this.route('many-inputs');
-  });
+  this.route('checkboxes');
+  this.route('many-checkboxes');
   this.route('text-input');
   this.route('select-input');
 });

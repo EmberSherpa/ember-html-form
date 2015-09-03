@@ -1,17 +1,26 @@
-<h3>Radio Inputs</h3>
+<div class="posts">
+    <section class="post">
+        <header class="post-header">
+            <h2 class="post-title">Radio Input</h2>
+        </header>
 
-{{#each units as |unit|}}
-  <label>
-    <input  type="radio"
-            name="checkboxes"
-            value="{{unit.id}}"
-            onclick={{action "setActiveUnit" value="target.value"}}
-            checked={{eq activeUnit unit.id}}>
-            {{unit.name}}<br>
-  </label>
-{{/each}}<br>
-
-{{!TODO: use get helper to get full name}}
-{{#if activeUnit}}
-  <p>Active measurement units are {{activeUnit}}</p>
-{{/if}}
+        <div class="pure-g post-description">
+          <div class="pure-u-1 pure-u-md-1-6">
+            {{! BEGIN-SNIPPET radio-input}}
+            {{#each units as |unit|}}
+              <label><input type="radio"
+                  name="options"
+                  value="{{unit.id}}"
+                  onclick={{action (mut activeUnit) value="target.value"}}
+                  checked={{eq activeUnit unit.id}}> {{unit.name}}
+              </label><br>
+            {{/each}}
+            {{! END-SNIPPET }}
+            <strong>{{activeUnit}}</strong>
+          </div>
+          <div class="pure-u-1 pure-u-md-5-6">
+            {{code-snippet name="radio-input.hbs"}}
+          </div>
+        </div>
+    </section>
+</div>

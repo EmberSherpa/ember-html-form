@@ -1,9 +1,23 @@
-<h2>Select Input</h2>
+<div class="posts">
+    <section class="post">
+        <header class="post-header">
+            <h2 class="post-title">Select Input</h2>
+        </header>
 
-<select onchange={{action (mut activeUnit) value='target.value'}}>
-  {{#each units as |unit|}}
-    <option value={{unit}} selected={{eq activeUnit unit}}>{{unit}}</option>
-  {{/each}}
-</select>
-
-<p>Selected input: {{activeUnit}}</p>
+        <div class="pure-g post-description">
+          <div class="pure-u-1 pure-u-md-1-6">
+            {{! BEGIN-SNIPPET select-input}}
+            <select onchange={{action (mut activeUnit) value='target.value'}}>
+              {{#each units as |unit|}}
+                <option value={{unit}} selected={{eq activeUnit unit}}>{{unit}}</option>
+              {{/each}}
+            </select>
+            {{! END-SNIPPET}}
+            {{activeUnit}}
+          </div>
+          <div class="pure-u-1 pure-u-md-5-6">
+            {{code-snippet name="select-input.hbs"}}
+          </div>
+        </div>
+    </section>
+</div>

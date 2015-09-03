@@ -4,6 +4,7 @@ const {
   on
 } = Ember;
 
+// BEGIN-SNIPPET many-checkboxes
 export default Ember.Controller.extend({
   initialize: on('init', function(){
     this.set('selection', []);
@@ -19,3 +20,4 @@ export default Ember.Controller.extend({
     }
   }
 });
+// END-SNIPPET

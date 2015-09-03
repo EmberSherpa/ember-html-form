@@ -1,12 +1,31 @@
-<h2 id="title">Ember HTML Forms</h2>
+<div class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-5">
+        <div class="header">
+            <h1 class="brand-title">HTML Forms</h1>
+            <h2 class="brand-tagline">in Ember without abstractions</h2>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  {{#link-to 'text-input' class="pure-button"}}Text Input{{/link-to}}
+                </li>
+                <li class="nav-item">
+                  {{#link-to 'select-input' class="pure-button"}}Select Input{{/link-to}}
+                </li>
+                <li class="nav-item">
+                  {{#link-to 'radio-input' class="pure-button"}}Radio{{/link-to}}
+                </li>
+                <li class="nav-item">
+                  {{#link-to 'checkboxes' class="pure-button"}}Checkboxes{{/link-to}}
+                </li>
+                <li class="nav-item">
+                  {{#link-to 'many-checkboxes' class="pure-button"}}Many Checkboxes{{/link-to}}
+                </li>
+              </ul>
+            </nav>
+        </div>
+    </div>
 
-<ul>
-  <li>{{#link-to 'radio-input'}}Radio Input{{/link-to}}</li>
-  <li>{{#link-to 'checkbox-input'}}Checkbox Input{{/link-to}}</li>
-  <li>{{#link-to 'checkbox-input.many-inputs'}}Many Checkboxes{{/link-to}}</li>
-  <li>{{#link-to 'text-input'}}Text Input{{/link-to}}</li>
-  <li>{{#link-to 'select-input'}}Select Input{{/link-to}}</li>
-</ul>
-
-
-{{outlet}}
+    <div class="content pure-u-1 pure-u-md-4-5">
+      {{outlet}}
+    </div>
+</div>
