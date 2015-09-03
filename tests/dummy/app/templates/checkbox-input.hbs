@@ -1,20 +1,2 @@
 <h3>Checkboxes</h3>
-
-<div class="row">
-  <h4>Categories</h4>
-  {{#each checkboxCategories as |category|}}
-    <label>
-      <input
-        type="checkbox"
-        name="categories"
-        value={{category.id}}
-        onclick={{action "updateCategories" value="target.value"}}
-        checked={{array-contains categories category.id}}
-        > {{category.name}}
-    </label>
-  {{/each}}
-</div>
-
-{{#if selectedCategories}}
-  <p>Selected categories are: {{selectedCategories}}</p>
-{{/if}}
+{{outlet}}

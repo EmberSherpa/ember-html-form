@@ -1,0 +1,28 @@
+<h4>Many Inputs</h4>
+<div class="many-inputs">
+  {{#ember-collection
+    classNames="checkboxes"
+    items=model
+    height=250
+    width=300
+    cell-layout=(fixed-grid-layout 300 25)
+    as |item|}}
+      <label>
+        <input
+          type="checkbox"
+          name="items"
+          value={{item.id}}
+          onclick={{action "updateSelection" value="target.value"}}
+          checked={{array-contains selection item.id}}
+          > {{item.name}}
+      </label>
+  {{/ember-collection}}
+</div>
+<div class="selected-values">
+  <h5>Selected</h5>
+  <ul>
+    {{#each selection as |item|}}
+      <li>{{item}}</li>
+    {{/each}}
+  </ul>
+</div>
