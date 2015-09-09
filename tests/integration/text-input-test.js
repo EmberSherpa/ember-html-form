@@ -20,7 +20,7 @@ test('values entered are correctly displayed', function(assert){
         </header>
 
         <div class="pure-g post-description">
-          <div class="pure-u-1 pure-u-md-1-3">
+          <div class="pure-u-1 pure-u-md-1-3 pure-text">
             <input type="text"
               value={{title}}
               oninput={{action (mut title) value="target.value"}}
@@ -35,7 +35,7 @@ test('values entered are correctly displayed', function(assert){
 
     <section class="post">
     <div class="pure-g post-description">
-      <div class="pure-u-1 pure-u-md-1-3">
+      <div class="pure-u-1 pure-u-md-1-3 pure-textbox">
         <textarea
           value={{content}}
           onkeyup={{action (mut content) value="target.value"}}
