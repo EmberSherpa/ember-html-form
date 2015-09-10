@@ -14,14 +14,17 @@ module('Acceptance | user can enter input values', {
 
 test('users can enter values in textarea and text input fields', function(assert) {
   visit('/text-input');
-  fillIn('.pure-textbox input', 'foo');
-  fillIn('.pure-textarea textarea', 'bar');
   andThen(function() {
     assert.equal(currentURL(), '/text-input');
+    // assert original values
   });
-
-  keyEvent('input[type=text]', 'input', 13).then(function(){
-      assert.equal($('.title').text(), 'foo', 'text "foo" has been entered into test input');
-      assert.equal($('.contents').text(), 'bar', 'text "bar" has been entered into textarea');
+  Ember.run(() => {
+    fillIn('input[type=text]', 'foo');
+  });
+  fillIn('textarea', 'bar');
+  keyEvent('input[type=text]', 'input', 13);
+  andThen(function(){
+    assert.equal($('.input-value').text().trim(), 'foo', 'text "foo" has been entered into test input');
+    assert.equal($('.textarea-value').text(), 'bar', 'text "bar" has been entered into textarea');
   });
 });

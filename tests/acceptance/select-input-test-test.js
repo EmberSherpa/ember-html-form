@@ -14,10 +14,10 @@ module('Acceptance | select input test', {
 
 test('users can select a dropdown value', function(assert) {
   visit('/select-input');
-  fillIn('.pure-u-1 select', 'inches');
+  fillIn('.select-input select', 'inches');
 
   andThen(function() {
     assert.equal(currentURL(), '/select-input');
-    assert.equal($('.select').text(), 'inches', 'proper value selected "inches"');
+    assert.equal($('.select-value').text(), 'inches', 'proper value selected "inches"');
   });
 });
