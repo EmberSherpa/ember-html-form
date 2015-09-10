@@ -14,7 +14,7 @@
               oninput={{action (mut title) value="target.value"}}
             />
             {{! END-SNIPPET}}
-            {{title}}
+            <span class="input-value">{{title}}</span>
           </div>
           <div class="pure-u-1 pure-u-2-3">
             {{code-snippet name="text-input.hbs"}}
@@ -36,7 +36,7 @@
               onchange={{action (mut content) value="target.value"}}
             />
             {{! END-SNIPPET }}
-            {{content}}
+            <span class="textarea-value">{{content}}</span>
           </div>
           <div class="pure-u-1 pure-u-2-3">
             {{code-snippet name="textarea-input.hbs"}}

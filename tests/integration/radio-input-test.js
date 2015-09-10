@@ -38,7 +38,3 @@ test('clicking a radio input changes state value', function(assert){
     });
     assert.equal(this.$('.unit p').text(), 'Active measurement units are in', 'Inches are the active units after clicking');
 });
-
-
-// TODO: test that clicking a radio input changes state value
-// TODO: test that providing default value sets correct radio input
