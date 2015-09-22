@@ -16,7 +16,7 @@
                 name="options"
                 value="{{option.id}}"
                 onclick={{action "updateSelection" value="target.value"}}
-                checked={{array-contains options option.id}}
+                checked={{array-contains selection option.id}}
                 > {{option.name}}
             </label><br>
           {{/each}}
